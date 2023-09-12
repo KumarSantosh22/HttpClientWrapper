@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpServiceCliente", "HttpClientWrapper\HttpServiceCliente.csproj", "{5E221A49-C279-4D56-8700-9ABE6579E925}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientWrapper.UnitTest", "HttpClientWrapper.UnitTest\HttpClientWrapper.UnitTest.csproj", "{6E56AA0F-4CED-42F9-B7D3-A37616DF7D93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E221A49-C279-4D56-8700-9ABE6579E925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E221A49-C279-4D56-8700-9ABE6579E925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E221A49-C279-4D56-8700-9ABE6579E925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E221A49-C279-4D56-8700-9ABE6579E925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E56AA0F-4CED-42F9-B7D3-A37616DF7D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E56AA0F-4CED-42F9-B7D3-A37616DF7D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E56AA0F-4CED-42F9-B7D3-A37616DF7D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E56AA0F-4CED-42F9-B7D3-A37616DF7D93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E25A4AB-F1C5-47EC-82FC-9DD369DE0358}
+	EndGlobalSection
+EndGlobal
