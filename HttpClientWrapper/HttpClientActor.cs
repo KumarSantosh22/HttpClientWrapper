@@ -49,10 +49,10 @@ namespace HttpClientWrapper
             return data;
         }
 
-        public async Task<TResponse> PostAsync<TRequest, TResponse>(string endpoint, TRequest body)
+        public async Task<TResponse> PostAsync<TRequest, TResponse>(string endpoint, TRequest body, string contentType = BagOfWords.ApplicationJson)
         {
             string json = JsonSerializer.Serialize(body, _options);
-            StringContent httpContent = new(json, System.Text.Encoding.UTF8, "application/json");
+            StringContent httpContent = new(json, System.Text.Encoding.UTF8, contentType);
 
             HttpResponseMessage response = await client.PostAsync(endpoint, httpContent);
             string content = await response.Content.ReadAsStringAsync();
@@ -64,10 +64,10 @@ namespace HttpClientWrapper
             return data;
         }
 
-        public async Task<TResponse> PutAsync<TRequest, TResponse>(string endpoint, TRequest body)
+        public async Task<TResponse> PutAsync<TRequest, TResponse>(string endpoint, TRequest body, string contentType = BagOfWords.ApplicationJson)
         {
             string json = JsonSerializer.Serialize(body, _options);
-            StringContent httpContent = new(json, System.Text.Encoding.UTF8, "application/json");
+            StringContent httpContent = new(json, System.Text.Encoding.UTF8, contentType);
 
             HttpResponseMessage response = await client.PutAsync(endpoint, httpContent);
             string content = await response.Content.ReadAsStringAsync();
@@ -91,7 +91,7 @@ namespace HttpClientWrapper
             return data;
         }
 
-        public void SetBearerToken(string token, string scheme = BagOfWords.Bearer)
+        public void SetToken(string token, string scheme = BagOfWords.Bearer)
         {
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(scheme, token);
         }
